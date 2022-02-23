@@ -1,10 +1,23 @@
 import splashMe from "./images/splash-me.png";
 import splash from "./images/splash.jpg";
+import { useRef, useEffect } from "react";
 const Splash = () => {
   /*
   document.addEventListener("mousemove", (event) => {
     console.log(event.offsetX);
   });*/
+
+  const myTopNav = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries;
+      console.log("entry", entry);
+      entry[0].isIntersecting
+        ? (document.getElementById("sideNav").style.opacity = "0")
+        : (document.getElementById("sideNav").style.opacity = "1");
+    });
+    observer.observe(myTopNav.current);
+  }, []);
   return (
     <>
       <div
@@ -26,7 +39,7 @@ const Splash = () => {
           id="topNavBar"
           className="absolute flex space-x-32  font-poppins font-semibold pt-[30px] right-[10vw] h-[50px] w-auto text-[#2a2a2a]  z-30"
         >
-          <div className="hover:underline cursor-pointer">
+          <div ref={myTopNav} className="hover:underline cursor-pointer">
             <a href="#portfolio">Portfolio</a>
           </div>
           <div className="hover:underline cursor-pointer">

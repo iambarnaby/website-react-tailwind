@@ -8,7 +8,10 @@ const Navigation = () => {
 
   return (
     <>
-      <div className=" fixed z-40 flex right-5 top-[34%]">
+      <div
+        id="sideNav"
+        className=" fixed z-40 flex right-5 top-[34%]  transition-opactiy ease-in-out duration-300"
+      >
         <div className="grid gap-7 z-10">
           <a href="#top" data-tooltip="Top">
             <button className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-red-600 border-red-400 border-l-4 hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
