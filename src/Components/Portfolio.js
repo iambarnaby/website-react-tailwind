@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import { CgOptions } from "react-icons/cg";
 import NodeTab from "./TabComponents/NodeTab";
 import ReactTab from "./TabComponents/ReactTab";
 import ShopifyTab from "./TabComponents/ShopifyTab";
@@ -11,7 +12,6 @@ const Portfolio = () => {
     setTab(value);
   };
   const renderSwitch = (tab) => {
-    console.log("switch run");
     switch (tab) {
       case "react":
         return <ReactTab />;
@@ -27,8 +27,31 @@ const Portfolio = () => {
         );
     }
   };
+
+  const myPortfolio = useRef();
+  const options = {
+    threshold: 0,
+    rootMargin: "-50%",
+  };
+
+  const [isPulse, setIsPulse] = useState("0");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.getElementById("TrianglePing").style.display = "block";
+        } else {
+          document.getElementById("TrianglePing").style.display = "none";
+        }
+      });
+    }, options);
+    observer.observe(myPortfolio.current);
+  });
+
   return (
     <div
+      ref={myPortfolio}
       id="portfolio"
       className=" bg-[#2a2a2a] w-[100vw] max-w-full h-[auto] min-h-screen pb-[50px]"
     >

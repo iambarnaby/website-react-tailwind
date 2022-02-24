@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TestimonialData } from "./TabComponents/TestimonialData";
 import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg";
 import { IconContext } from "react-icons";
@@ -15,9 +15,29 @@ const Testimonials = () => {
       currentSlide === 0 ? TestimonialData.length - 1 : currentSlide - 1
     );
   };
+
+  const myTestimonials = useRef();
+  const options = {
+    threshold: 0,
+    rootMargin: "-500px",
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.getElementById("CrossPing").style.display = "block";
+        } else {
+          document.getElementById("CrossPing").style.display = "none";
+        }
+      });
+    }, options);
+    observer.observe(myTestimonials.current);
+  }, []);
   return (
     <>
       <div
+        ref={myTestimonials}
         id="testimonials"
         className="relative flex items-center justify-center h-[540px] bg-[#FDD061] "
       >

@@ -1,6 +1,8 @@
 import splashMe from "./images/splash-me.png";
 import splash from "./images/splash.jpg";
 import { useRef, useEffect, useState } from "react";
+import { IconContext } from "react-icons";
+import { FaTwitterSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 const Splash = () => {
   /*
   document.addEventListener("mousemove", (event) => {
@@ -10,7 +12,6 @@ const Splash = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries;
-      console.log("entry", entry);
       entry[0].isIntersecting
         ? (document.getElementById("sideNav").style.opacity = "0")
         : (document.getElementById("sideNav").style.opacity = "1");
@@ -25,15 +26,45 @@ const Splash = () => {
         className="flex bg-[#EA8C55]  h-[994px] w-[100vw] max-w-full"
       >
         <div className="absolute flex space-x-4 pt-5 pl-5 w-auto h-auto z-30">
-          <div className="bg-[#2367C2] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
-            In
-          </div>
-          <div className="bg-[#505050] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
-            Git
-          </div>
-          <div className="bg-[#319BF0] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
-            Twit
-          </div>
+          <a href="https://linkedin.com/in/b-payne/">
+            <div className="bg-[#81b3f5] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
+              <IconContext.Provider
+                value={{
+                  size: "50px",
+                  color: "#2367C2",
+                  className: "global-class-name",
+                }}
+              >
+                <FaLinkedin />
+              </IconContext.Provider>
+            </div>
+          </a>
+          <a href="https://github.com/lampshed">
+            <div className="bg-[#242424] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
+              <IconContext.Provider
+                value={{
+                  size: "50px",
+                  color: "#505050",
+                  className: "global-class-name",
+                }}
+              >
+                <FaGithubSquare />
+              </IconContext.Provider>
+            </div>
+          </a>
+          <a href="https://twitter.com/barnaby_payne">
+            <div className="bg-[#266292] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
+              <IconContext.Provider
+                value={{
+                  size: "50px",
+                  color: "#319BF0",
+                  className: "global-class-name",
+                }}
+              >
+                <FaTwitterSquare />
+              </IconContext.Provider>
+            </div>
+          </a>
         </div>
         <div
           id="topNavBar"

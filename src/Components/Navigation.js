@@ -3,9 +3,6 @@ import Square from "./images/NavButtons/PlayStationSquare.svg.png";
 import Circle from "./images/NavButtons/PlayStationCircle.svg.png";
 import Cross from "./images/NavButtons/PlayStationCross.svg.png";
 const Navigation = () => {
-  const sectionOne = document.querySelectorAll("#topNavBar");
-  console.log(sectionOne);
-
   return (
     <>
       <div
@@ -23,21 +20,45 @@ const Navigation = () => {
           <a href="#portfolio" data-tooltip="Portfolio">
             <button className="flex justify-center w-[50px] h-[50px] rounded-full bg-[#e2edf5] hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <img className="h-[35px] w-auto" src={Triangle} alt="tri"></img>
+              <img
+                id="TrianglePing"
+                className="absolute h-[35px] w-auto animate-ping delay-100"
+                src={Triangle}
+                alt="tri"
+              ></img>
             </button>
           </a>
           <a href="#about" data-tooltip="About">
             <button className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-[#e2edf5] hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <img className="h-[35px] w-auto" src={Square} alt="square"></img>
+              <img
+                id="SquarePing"
+                className="absolute h-[35px] w-auto animate-ping delay-100"
+                src={Square}
+                alt="tri"
+              ></img>
             </button>
           </a>
           <a href="#skills" data-tooltip="Skills">
             <button className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-[#e2edf5] hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <img src={Circle} alt="circle"></img>
+              <img
+                id="CirclePing"
+                className="absolute animate-ping delay-100"
+                src={Circle}
+                alt="tri"
+              ></img>
             </button>
           </a>
           <a href="#testimonials" data-tooltip="Testimonials">
             <button className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-[#e2edf5] hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <img className="h-[35px] w-auto" src={Cross} alt="cross"></img>
+              <img
+                id="CrossPing"
+                className="h-[35px] w-auto absolute animate-ping delay-100"
+                src={Cross}
+                alt="cross"
+              ></img>
             </button>
           </a>
         </div>

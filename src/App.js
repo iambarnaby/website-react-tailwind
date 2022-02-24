@@ -8,6 +8,14 @@ import Testimonials from "./Components/Testimonials";
 import { React, useEffect, useRef, useState } from "react";
 
 function App() {
+  const [isOnScreen, setIsOnScreen] = useState({
+    splashOn: false,
+    portOn: false,
+    aboutOn: false,
+    skillsOn: false,
+    testimonialsOn: false,
+  });
+  console.log(isOnScreen.splashOn);
   return (
     <div>
       <Navigation />
