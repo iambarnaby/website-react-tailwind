@@ -1,12 +1,11 @@
 import splashMe from "./images/splash-me.png";
 import splash from "./images/splash.jpg";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 const Splash = () => {
   /*
   document.addEventListener("mousemove", (event) => {
     console.log(event.offsetX);
   });*/
-
   const myTopNav = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -18,8 +17,9 @@ const Splash = () => {
     });
     observer.observe(myTopNav.current);
   }, []);
+
   return (
-    <>
+    <div>
       <div
         id="top"
         className="flex bg-[#EA8C55]  h-[994px] w-[100vw] max-w-full"
@@ -39,17 +39,22 @@ const Splash = () => {
           id="topNavBar"
           className="absolute flex space-x-32  font-poppins font-semibold pt-[30px] right-[10vw] h-[50px] w-auto text-[#2a2a2a]  z-30"
         >
-          <div ref={myTopNav} className="hover:underline cursor-pointer">
+          <div ref={myTopNav} className="group cursor-pointer">
             <a href="#portfolio">Portfolio</a>
+
+            <div className="transition-all  w-[0%] h-[5px] bg-slate-600 group-hover:w-[100%] group-hover:transition-all duration-300 ease-in-out"></div>
           </div>
-          <div className="hover:underline cursor-pointer">
+          <div className="group cursor-pointer">
             <a href="#about">About</a>
+            <div className="transition-all  w-[0%] h-[5px] bg-slate-600 group-hover:w-[100%] group-hover:transition-all duration-300 ease-in-out"></div>
           </div>
-          <div className="hover:underline cursor-pointer">
+          <div className="group cursor-pointer">
             <a href="#skills">Skills</a>
+            <div className="transition-all  w-[0%] h-[5px] bg-slate-600 group-hover:w-[100%] group-hover:transition-all duration-300 ease-in-out"></div>
           </div>
-          <div className="hover:underline cursor-pointer">
+          <div className="group cursor-pointer">
             <a href="#testimonials">Testimonials</a>
+            <div className="transition-all  w-[0%] h-[5px] bg-slate-600 group-hover:w-[100%] group-hover:transition-all duration-300 ease-in-out"></div>
           </div>
         </div>
         <div className="relative h-full w-full">
@@ -74,7 +79,7 @@ const Splash = () => {
           ></img>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
