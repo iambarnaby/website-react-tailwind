@@ -4,7 +4,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 const SkillTailwind = () => {
   return (
-    <div className="hover:translate-y-[-20px] hover:translate-x-[20px] transition-all children:bg-[#1d1d1d] children:w-[300px] children:h-[300px]">
+    <div className="hover:translate-y-[-20px] hover:translate-x-[20px] transition-all children:!bg-[#1d1d1d] children:w-[300px] children:h-[300px]">
       <Tilt id="skill-card" className="group hover:">
         <div className="flex justify-center items-center ">
           <IconContext.Provider
