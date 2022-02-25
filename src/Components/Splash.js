@@ -25,7 +25,7 @@ const Splash = () => {
         id="top"
         className="flex bg-[#EA8C55]  h-[994px] w-[100vw] max-w-full"
       >
-        <div className="absolute flex space-x-4 pt-5 pl-5 w-auto h-auto z-30">
+        <div className="fixed flex space-x-4 pt-5 pl-5 w-auto h-auto z-30">
           <a href="https://linkedin.com/in/b-payne/">
             <div className="bg-[#81b3f5] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <IconContext.Provider

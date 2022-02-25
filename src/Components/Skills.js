@@ -32,7 +32,7 @@ const Skills = () => {
         id="skills"
         className="h-[100vh] bg-[#2a2a2a] overflow-hidden"
       >
-        <div className="relative font-poppins text-[#ffcc00] left-10 top-10 font-semibold text-size28">
+        <div className="relative font-poppins text-[#ffcc00] left-96 top-20 font-semibold text-size28">
           Skills
         </div>
         <div className="relative flex justify-center items-center h-[100%] w-[100%]">
