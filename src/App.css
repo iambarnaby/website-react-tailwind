@@ -40,3 +40,13 @@
   transform: translateY(0);
 }
 /*End Tooltip styling*/
+
+/*Skill Cards*/
+
+#skill-card {
+  box-shadow: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px !important;
+}

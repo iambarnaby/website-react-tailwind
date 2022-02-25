@@ -53,7 +53,7 @@ const Splash = () => {
             </div>
           </a>
           <a href="https://twitter.com/barnaby_payne">
-            <div className="bg-[#266292] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
+            <div className="bg-[#e9f5ff] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <IconContext.Provider
                 value={{
                   size: "50px",

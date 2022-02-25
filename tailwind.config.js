@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
@@ -10,7 +11,11 @@ module.exports = {
       size28: "28px",
       size: "21px",
     },
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
+    },
   },
   variants: {
     display: [
