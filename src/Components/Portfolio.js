@@ -34,8 +34,6 @@ const Portfolio = () => {
     rootMargin: "-50%",
   };
 
-  const [isPulse, setIsPulse] = useState("0");
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

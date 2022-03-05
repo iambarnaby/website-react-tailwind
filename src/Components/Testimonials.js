@@ -19,7 +19,7 @@ const Testimonials = () => {
   const myTestimonials = useRef();
   const options = {
     threshold: 0,
-    rootMargin: "-500px",
+    rootMargin: "-50%",
   };
 
   useEffect(() => {

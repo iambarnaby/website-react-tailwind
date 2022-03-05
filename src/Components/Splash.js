@@ -40,11 +40,11 @@ const Splash = () => {
             </div>
           </a>
           <a href="https://github.com/lampshed">
-            <div className="bg-[#242424] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
+            <div className="bg-[#c0c0c0] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <IconContext.Provider
                 value={{
                   size: "50px",
-                  color: "#505050",
+                  color: "#1b1b1b",
                   className: "global-class-name",
                 }}
               >
