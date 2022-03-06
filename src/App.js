@@ -7,6 +7,8 @@ import Splash from "./Components/Splash";
 import Testimonials from "./Components/Testimonials";
 import { React, useEffect, useRef, useState } from "react";
 
+import ContactFooter from "./Components/ContactFooter";
+
 function App() {
   const [isOnScreen, setIsOnScreen] = useState({
     splashOn: false,
@@ -24,6 +26,7 @@ function App() {
       <About />
       <Skills />
       <Testimonials />
+      <ContactFooter />
     </div>
   );
 }
