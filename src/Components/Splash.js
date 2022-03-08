@@ -39,7 +39,7 @@ const Splash = () => {
               </IconContext.Provider>
             </div>
           </a>
-          <a href="https://github.com/lampshed">
+          <a href="https://github.com/lampshed/website-react-tailwind">
             <div className="bg-[#c0c0c0] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <IconContext.Provider
                 value={{
@@ -92,6 +92,10 @@ const Splash = () => {
           <div className="absolute top-[280px] left-[200px] font-poppins font-normal text-size48 z-20">
             <span className="text-[#Fafafa]">My Passion.</span>
             <span className="text-[#2a2a2a]"> Your Project.</span>
+          </div>
+          <div className="absolute top-[450px] left-[500px] font-teko tracking-widest text-[24px] animate-pulse">
+            Welcome to my new website! It's currently under maintenance and a
+            little rough around the edges, but feel free to look around!
           </div>
           <div className="absolute w-full h-full z-20 ">
             <div className="relative w-[230px] h-[230px] rounded-full bg-[#fafafa] left-[7.5rem] top-[38rem]"></div>

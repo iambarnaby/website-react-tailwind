@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { CgOptions } from "react-icons/cg";
 import NodeTab from "./TabComponents/NodeTab";
 import ReactTab from "./TabComponents/ReactTab";
 import ShopifyTab from "./TabComponents/ShopifyTab";
