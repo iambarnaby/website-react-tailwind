@@ -44,13 +44,25 @@ const About = () => {
           <span className="flex justify-center">
             <img src={AboutMe} className=" h-auto" alt="me"></img>
           </span>
-          <div>
-            <button className=" mr-10 py-5 px-10 bg-slate-600 border-4 border-slate-600">
-              Contact Me
-            </button>
-            <button className="py-5 px-10 border-4 border-slate-600">
-              Download CV
-            </button>
+          <div className="flex flex-row gap-4">
+            <a href="#testimonials" className="h-[70px]">
+              <div className="group h-[70px] w-[250px] bg-transparent border-4 border-slate-600 rounded shadow-xl hover:shadow-cyan-500/50 transition-all hover:translate-y-[-3px] hover:translate-x-2 active:translate-y-[3px] active:translate-x-[-0.5rem]">
+                <div className=" bg-slate-600 h-[0%] relative group-hover:h-[100%] transition-all flex justify-center ">
+                  <div className=" absolute top-[20px] font-extrabold">
+                    Contact Me
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#testimonials">
+              <div className="group h-[70px] w-[250px] bg-transparent border-4 border-slate-600 rounded shadow-xl hover:shadow-cyan-500/50 transition-all hover:translate-y-[-3px] hover:translate-x-2">
+                <div className=" bg-slate-600 w-[0%] h-[100%] relative group-hover:w-[100%] transition-all flex items-center">
+                  <div className=" absolute left-[105px]  font-extrabold">
+                    CV
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
