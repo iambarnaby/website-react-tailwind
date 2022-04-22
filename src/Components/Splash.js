@@ -1,6 +1,6 @@
 import splashMe from "./images/splash-me.png";
 import splash from "./images/splash.jpg";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { FaTwitterSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 const Splash = () => {
@@ -39,7 +39,7 @@ const Splash = () => {
               </IconContext.Provider>
             </div>
           </a>
-          <a href="https://github.com/lampshed/website-react-tailwind">
+          <a href="https://github.com/iambarnaby">
             <div className="bg-[#c0c0c0] w-[45px] h-[45px] rounded-md hover:translate-y-[-4px] transition-transform active:translate-y-[2px]">
               <IconContext.Provider
                 value={{
